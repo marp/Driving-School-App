@@ -1,0 +1,133 @@
+<div class="page">
+    <div class="navbar">
+        <div class="navbar-inner sliding">
+            <div class="left">
+                <a href="#" class="link back">
+                    <i class="icon icon-back"></i>
+                    <span class="ios-only">Wróć</span>
+                </a>
+            </div>
+            <div class="title">DEBUG</div>
+        </div>
+    </div>
+    <div class="page-content bg-ciemne">
+        <!-- <input id="imie" type="text" placeholder="Imię"><br> -->
+        <!-- <input id="nazwisko" type="text" placeholder="Nazwisko"><br> -->
+        <!-- <input type="button" value="Dodaj do bazy" onClick="AddValueToDB()"><br> -->
+
+        <br>
+        <p>Kliknij na przycisk z nazwą tabelki aby odświeżyć.</p>
+        <br>
+        <hr>
+
+
+
+        <div class="block">
+            <p class="row">
+                <button class="col button button-small button-outline" onClick="ListDBValuesFromDrive()"  value="Odśwież">Drive</button>
+                <button class="col"></button>
+                <button class="col"></button>
+            </p>
+        </div>
+        <div class="data-table card">
+            <table>
+              <thead>
+                <tr>
+                  <th class="numeric-cell">Id</th>
+                  <th class="numeric-cell">instructor_id</th>
+                  <th class="numeric-cell">km_start</th>
+                  <th class="numeric-cell">km_stop</th>
+                </tr>
+              </thead>
+              <tbody id="lbDrives">
+
+              </tbody>
+            </table>
+          </div>
+        <hr>
+
+
+
+        <div class="block">
+                <p class="row">
+                    <button class="col button button-small button-outline" onClick="ListDBValuesFromTrack()"  value="Odśwież">Track</button>
+                    <button class="col"></button>
+                    <button class="col"></button>
+                </p>
+            </div>
+            <div class="data-table card">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="numeric-cell">Id</th>
+                      <th class="numeric-cell">Drive_Id</th>
+                      <th class="numeric-cell">X</th>
+                      <th class="numeric-cell">Y</th>
+                      <th class="numeric-cell">Time</th>
+                    </tr>
+                  </thead>
+                  <tbody id="lbTrack">
+                  </tbody>
+                </table>
+              </div>
+            <hr>
+
+
+
+        <div class="block">
+                <p class="row">
+                    <button class="col button button-small button-outline" onClick="ListDBValuesFromStatus()"  value="Odśwież">Status</button>
+                    <button class="col"></button>
+                    <button class="col"></button>
+                </p>
+            </div>
+            <div class="data-table card">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="numeric-cell">Id</th>
+                      <th class="label-cell">Name</th>
+                      <th class="numeric-cell">State</th>
+                    </tr>
+                  </thead>
+                  <tbody id="lbStatus">
+                  </tbody>
+                </table>
+              </div>
+            <hr>
+
+
+
+            <button class="col button button-small button-outline" onClick="DeleteEverything()"  value="Odśwież">Usuń wszystko</button>
+            <button class="col button button-small button-outline" id="latest_id_check_debug" >LatestID</button>
+            <p>To do:
+              <br>
+              <ul>
+                <li>logowanie</li>
+                <li>Godziny w stoperze</li>
+                <li>pobieranie listy kursantów</li>
+
+              </ul>
+              <ul>
+                <li><s>Usuwanie w debug</s></li>
+                <li><s>update w km_stop</s></li>
+                <li><s>wysyłanie trasy</s></li>
+                <li><s>Dodawanie wielu klientów</s></li>
+                <li><s>Link w /about/</s></li>
+              </ul>
+            </p>
+
+          <button class="button" id="json_btn">POBIERZ JSONA</button>
+          <button class="button" id="get_tracks_debug">GET TRACKS(dla jsona)</button>
+          <button class="button" onclick='$.post( "http://localhost/tests/odbierajka_jsonow/index.php", function( data ) {
+            alert( "Data Loaded: " + data );
+            });'>TEST</button>
+          <button class="button" onclick='console.log(localStorage);'>console.log(localStorage);</button>
+          <button class="button" onclick='localStorage.clear();'>localStorage.clear();</button>
+          <button class="button" onclick='alert("test");'>alert test</button>
+          <button class="button" onclick='app.dialog.alert("Hello",function(){alert("test");});'>app.dialog.alert test</button>
+
+
+
+    </div>
+</div>

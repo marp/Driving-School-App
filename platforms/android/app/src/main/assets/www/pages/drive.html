@@ -1,0 +1,51 @@
+<div class="page">
+    <div class="navbar">
+        <div class="navbar-inner sliding">
+            <div class="title">
+                    <div class="preloader color-red">
+                            <span class="preloader-inner">
+                              <span class="preloader-inner-gap"></span>
+                              <span class="preloader-inner-left">
+                                  <span class="preloader-inner-half-circle"></span>
+                              </span>
+                              <span class="preloader-inner-right">
+                                  <span class="preloader-inner-half-circle"></span>
+                              </span>
+                            </span>
+                    </div>
+                   Trwa jazda...
+            </div>
+        </div>
+    </div>
+    <div class="page-content">
+
+        <button id="button-reset" class="d-none">Reset</button>
+
+        <div class="stopwatch">
+            <i class="f7-icons">stopwatch</i><div class="d-inline">&nbsp<span id="hours">00</span>:<span id="mins">00</span>:<span id="seconds">00</span><span style="display:none;" id="tens">00</span></div>
+        </div>
+
+        <div style="padding: 2%; display: none;">
+            <div style="width: 48%; float: left;"><button id="stopwatch_pause" class="col button button-fill"><i class="f7-icons size-22">pause_round_fill</i>&nbspZatrzymaj</button></div>
+            <div style="float: left; padding-left: 1%; padding-right: 1%;">&nbsp;</div>
+            <div style="width: 48%; float: left;"><button id="stopwatch_start" class="col button button-fill"><i class="f7-icons size-22">play_round_fill</i>&nbspWznów</button></div>
+
+        </div>
+        <div style="clear:both;"></div>
+
+
+        X: <div id="x"></div>
+        Y: <div id="y"></div>
+        Altitude: <div id="altitude"></div>
+        Accuracy:<div id="accuracy"></div>
+        altitudeAccuracy: <div id="altitudeAccuracy"></div>
+        Heading: <div id="heading"></div>
+        Speed: <div id="speed"></div>
+        Timestamp:<div id="timestamp"></div>
+
+        <div>
+          <div id="stop_button" class="round-button"><div class="round-button-circle"><a href="" class="round-button item-link item-content">STOP!</a></div></div>
+        </div>
+
+    </div>
+</div>
